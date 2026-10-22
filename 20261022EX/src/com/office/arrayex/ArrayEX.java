@@ -47,8 +47,76 @@ public class ArrayEX {
 		}
 		
 		
+		/*
+		 * 배열 데이터 수정: 인덱스(index)를 이용한 데이터 수정
+		 */
+		int[] points = {80, 70, 100, 60, 90};
+		for (int i = 0; i < points.length; i++) {
+			System.out.printf("points[%d]: %d\n", i, points[i]);
+		}
 		
 		
+		//for each
+		for (int point : points) {
+			System.out.println("point: " + point);
+		}
+		
+		
+		
+		points[0] = 800;
+		System.out.println("points[0]: " + points[0]);
+		
+		/*
+		 * java의 배열 특징
+		 * 1. 배열은 단일 데이터타입만 저장 가능하다.
+		 * 2. 최초 선언된 배열의 길이는 변경 불가하다.
+		 * (새로운 배열 가리키는 이전 형식만 가능)
+		 * 3. 존재하지 않는 인덱스를 이용하게 되면 에러 발생한다.
+		 */
+		
+
+		int[] ns = {1, 2, 3}; 	//length: 3
+
+//		ns = new int[5]; 		//새로운 배열을 가리키는 것
+
+		System.out.println(ns[2]); //3
+//		System.out.println(ns[3]); //에러 발생
+		
+		System.out.println("+++++");
+		
+		/*
+		 * Q) 배열을 이용해서 학급 학생의 시험 성적, 총점, 평균을 출력하자! 
+		 */
+		
+		int[] studentScores = {80, 95, 100, 70, 68, 74, 88, 98, 100, 76};
+		int total = 0;			//총합
+		float average = 0.0f;	//평균
+
+		for (int i = 0; i <studentScores.length; i++) {
+			//학생 개인 점수 출력
+			System.out.printf("studentScores[%d] score: %d \n", i, studentScores[i]);
+			
+			//총합
+			total += studentScores[i];
+		}
+		
+		//총합 출력
+		System.out.println("Total score: " + total);
+		
+		//평균 출력
+		average = total / studentScores.length; 
+		System.out.println("Average: " + average);
+		
+		// 값이 없는 배열의 초기값은?
+		int[] classes = new int[5];
+		for (int i = 0; i < classes.length; i++) {
+			System.out.println(classes[i]);
+		}
+		
+		float[] averagees = new float[5];
+		for (int i = 0; i < averagees.length; i++) {
+			System.out.println(averagees[i]);
+		}
 		
 		
 	}
