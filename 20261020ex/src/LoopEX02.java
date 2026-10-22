@@ -53,7 +53,7 @@ public class LoopEX02 {
 		loopLabel1 : 
 		for (int i = 2; i < 10; i++) {
 			
-			loopLabel2 :
+//			loopLabel2 :
 			for (int k = 1; k < 10; k++) {
 				
 				if (k % 2 == 0)
