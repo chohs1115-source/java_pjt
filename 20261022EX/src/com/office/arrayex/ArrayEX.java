@@ -214,7 +214,7 @@ public class ArrayEX {
 		//System.out.println(mns[0][2]);	// 에러 발생
 		
 		mns[0][0] = 1000;
-		System.out.println(mns[0][0]);	//1000
+		System.out.println(mns[0][0]);	//1000	
 		
 	}
 
