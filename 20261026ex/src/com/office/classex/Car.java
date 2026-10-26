@@ -1,26 +1,28 @@
 package com.office.classex;
 
 public class Car {
-	
-	public Car() {
-		// TODO Auto-generated constructor stub
-	}
-	
+
 	// 속성
-	String carColor = "red";
-	int carLength = 500;
+	String color = "Black";
+	double size = 5.2;
+	int displacement = 2000;
+	
+	// 생성자
+		public Car() {
+			System.out.println("CAR CONSTRUCTOR CALLED!!");
+		}
 	
 	// 기능
-	public void goForward() {
-		System.out.println("goRoward()");
+	public void drive() {
+		System.out.println("drive() CALLED!!");
 	}
 	
-	public void goBack() {
-		System.out.println("goBack()");
+	public void parking() {
+		System.out.println("parking() CALLED!! ");
 	}
 	
 	public void stop() {
-		System.out.println("stop()");
+		System.out.println("stop() CALLED!!");
 	}
 	
 }
