@@ -14,27 +14,35 @@ public class NewStudent {
 	 */
 	
 	// 생성자
-	public NewStudent(
-			int classNo,
-			int studentNo,
-			String studentName) {
-		System.out.println("---CONSTRUTOR---");
+	public NewStudent(int grade, int classNo, int studentNo, String studentName, boolean absence) {
+		this.grade = grade;
+		this.classNo = classNo;
+		this.studentNo = studentNo;
+		this.studentName = studentName;
+		this.absence = absence;
+	}
+	
+	
+	public NewStudent(int classNo, int studentNo, String studentName, boolean absence) {
+		this.classNo = classNo;
+		this.studentNo = studentNo;
+		this.studentName = studentName;
+		this.absence = absence;
+	}
+
+	public NewStudent(int classNo, int studentNo, String studentName) {
 		this.classNo = classNo;
 		this.studentNo = studentNo;
 		this.studentName = studentName;
 	}
-	
-	public NewStudent(
-			int grade,
-			int classNo,
-			int studentNo,
-			String studentName) {
-		System.out.println("---CONSTRUTOR---");
+
+	public NewStudent(int grade, int classNo, int studentNo, String studentName) {
 		this.grade = grade;
 		this.classNo = classNo;
 		this.studentNo = studentNo;
 		this.studentName = studentName;
 	}
+	
 	
 	//메서드
 	public void printInfo() {
@@ -44,6 +52,8 @@ public class NewStudent {
 		System.out.println("학생 이름: " + studentName);
 		System.out.println("휴학 구분: " + absence);
 	}
+
+	
 	
 	
 	
