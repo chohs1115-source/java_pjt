@@ -18,6 +18,10 @@ public class MainClass {
 		
 		NewStudent newStudent5 = new NewStudent(1, 5, 4, "김연경");
 		newStudent5.printInfo();
+		
+		/* 디폴트 생성자 없음
+		NewStudent newStudent06 = new NewStudent();
+		*/
 	}
 
 }
