@@ -18,6 +18,7 @@ public class MemberService {
 	 */
 	public void doSignUp(Scanner scanner) {
 		
+		//과제1 : ID 중복체크 기능 추가 
 		System.out.println("Input new member ID");
 		String memberId = scanner.next();
 		
@@ -30,12 +31,18 @@ public class MemberService {
 		System.out.println("Input new member PHONE");
 		String memberPhone = scanner.next();
 		
-		Member member = new Member(memberId, memberPw, memberMail, memberPhone);
+
+		if (db.memberDB.containsKey(memberId)) {
+			System.out.println("이미 사용 중인 아이디입니다! 다시 입력하세요");
+			
+		} else {
+			Member member = new Member(memberId, memberPw, memberMail, memberPhone);
+			db.memberDB.put(memberId, member);
+			db.memberDB.get(memberId).printInfo();
+		}
+		
 		//MemberDB db = new MemberDB();
 		
-		db.memberDB.put(memberId, member);
-		
-		db.memberDB.get(memberId).printInfo();
 	}
 	
 	/*
