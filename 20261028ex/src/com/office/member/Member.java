@@ -17,7 +17,6 @@ public class Member {
 	}
 	
 	
-	
 	public Member(String memberId, String memberPw, String memberMail, String memberPhone) {
 		this.memberId = memberId;
 		this.memberPw = memberPw;

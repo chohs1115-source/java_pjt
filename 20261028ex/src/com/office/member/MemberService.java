@@ -42,6 +42,7 @@ public class MemberService {
 	 * 로그인
 	 */
 	public void doSignIn(Scanner scanner) {
+		
 		System.out.println("Input member ID");
 		String memberId = scanner.next();
 		
@@ -69,14 +70,47 @@ public class MemberService {
 	/*
 	 * 정보 수정
 	 */
-	public void doModify() {
+	public void doModify(Scanner scanner) {
+		
+		System.out.println("Input member ID");
+		String memberId = scanner.next();
+		
+		System.out.println("Input member PW");
+		String memberPw = scanner.next();
+		
+		System.out.println("Input member MAIL");
+		String memberMail = scanner.next();
+		
+		System.out.println("Input member PHONE");
+		String memberPhone = scanner.next();
+		
+		Member searchedMember = db.memberDB.get(memberId);
+		searchedMember.memberPw = memberPw;
+		searchedMember.memberMail = memberMail;
+		searchedMember.memberPhone = memberPhone;
+		
+		//로깅
+		searchedMember = db.memberDB.get(memberId);
+		searchedMember.printInfo();
 		
 	}
 	
 	/*
 	 * 회원 탈퇴
 	 */
-	public void doDelete() {
+	public void doDelete(Scanner scanner) {
+		
+		System.out.println("Input member ID");
+		String memberId = scanner.next();
+		
+		System.out.println("Input member PW");
+		String memberPw = scanner.next();
+		
+		Member searchedMember = db.memberDB.get(memberId);
+		
+		if (searchedMember != null && searchedMember.memberPw.equals(memberPw)) {
+			db.memberDB.remove(memberId);
+		}
 		
 	}
 	

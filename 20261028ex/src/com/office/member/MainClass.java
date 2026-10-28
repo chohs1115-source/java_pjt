@@ -8,7 +8,11 @@ public class MainClass {
 		
 		Scanner scanner = new Scanner(System.in);
 		boolean systemFlag = true;
+		
+		MemberDB memberDB = new MemberDB();
 		MemberService memberService = new MemberService(new MemberDB());
+		MemberDumy memberDumy = new MemberDumy(memberDB);
+		memberDumy.initMemberDumyData();
 		
 		while (systemFlag) {
 			
@@ -29,11 +33,11 @@ public class MainClass {
 			break;
 			
 		case 3:												//MODIFY
-	
+			memberService.doModify(scanner);
 			break;
 	
 		case 4:												//DELETE
-	
+			memberService.doDelete(scanner);
 			break;
 	
 		case 99:											//SYSTEM-OUT
