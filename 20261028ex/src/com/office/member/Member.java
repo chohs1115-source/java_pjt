@@ -13,9 +13,20 @@ public class Member {
 	
 	//생성자
 	public Member() {
-		// TODO Auto-generated constructor stub
+	
 	}
 	
+	
+	
+	public Member(String memberId, String memberPw, String memberMail, String memberPhone) {
+		this.memberId = memberId;
+		this.memberPw = memberPw;
+		this.memberMail = memberMail;
+		this.memberPhone = memberPhone;
+	}
+
+
+
 	//기능(메서드)
 	/*
 	 * 회원 정보 출력 기능

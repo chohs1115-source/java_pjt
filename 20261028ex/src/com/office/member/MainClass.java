@@ -8,6 +8,7 @@ public class MainClass {
 		
 		Scanner scanner = new Scanner(System.in);
 		boolean systemFlag = true;
+		MemberService memberService = new MemberService(new MemberDB());
 		
 		while (systemFlag) {
 			
@@ -15,42 +16,34 @@ public class MainClass {
 		int selectedMenu = scanner.nextInt();
 		
 		switch (selectedMenu) {
-		case 1:			//SING-UP
-			System.out.println("Input new member ID");
-			String memerID = scanner.next();
-			
-			System.out.println("Input new member PW");
-			String memerPW = scanner.next();
-			
-			System.out.println("Input new member MAIL");
-			String memerMAIL = scanner.next();
-			
-			System.out.println("Input new member PHONE");
-			String memerPHONE = scanner.next();
+		case 1:												 //SING-UP
+			//memberService= new MemberService();
+			memberService.doSignUp(scanner);
 			
 			break;
 		
-		case 2:		    //SING-IN
+		case 2:		   										 //SING-IN
+			//memberService= new MemberService();
+			memberService.doSignIn(scanner);
 			
 			break;
 			
-		case 3:			//MODIFY
+		case 3:												//MODIFY
 	
 			break;
 	
-		case 4:			//DELETE
+		case 4:												//DELETE
 	
 			break;
 	
-		case 99:		//SYSTEM-OUT
+		case 99:											//SYSTEM-OUT
 			systemFlag = false;
-			System.out.println("Say good Bye~");
+			System.out.println("Say Good Bye~");
 			break;
 		}
 
+		
 		}
-		
-		
 	    scanner.close();
 		
 	}
