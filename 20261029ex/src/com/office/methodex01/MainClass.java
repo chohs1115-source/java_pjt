@@ -14,6 +14,7 @@ public class MainClass {
 		greet.printGreetWord("홍길동");
 		*/
 		
+		/*
 		AddOperator addOperator = new AddOperator();
 		addOperator.add(10, 20);
 		
@@ -22,12 +23,12 @@ public class MainClass {
 		addOperator.add(3.14, 9.8);
 		
 		addOperator.add("Hello", "World");
+		*/
 		
-		
-		
-		
-		
-		
+		Score score = new Score();
+		score.printStudentScore(90, 80, 70);			// 3명
+		score.printStudentScore(90, 80, 70, 100, 90);	// 5명
+		score.printStudentScore(90, 80, 70, 100);		// 4명
 		
 		
 	}
