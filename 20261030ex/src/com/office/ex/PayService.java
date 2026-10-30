@@ -36,4 +36,8 @@ public class PayService {
 		System.out.println("누적 급여 횟수: " + cnt);
 		
 	}
+	
+	
+			
+
 }
