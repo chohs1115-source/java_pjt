@@ -11,6 +11,13 @@ public class PayService {
 		daeri = new Daeri();
 		gwajang = new Gwajang();
 		chajang = new Chajang();
+		
+		// daeri.money = 0;
+		// CEO 비밀번호가 1234
+		daeri.setMoney(1200000, "1234");
+		
+		// 누구나 월급 조회
+		System.out.println("김대리 월급: " + daeri.getMoney());
 	}
 	
 	public void pay (int month) {
