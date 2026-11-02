@@ -1,6 +1,6 @@
 package com.office.inheri.restaurant;
 
-public class ParentRestaurant {
+public abstract class ParentRestaurant {
 
 	//메서드
 		public void makeJajang() {
@@ -11,4 +11,6 @@ public class ParentRestaurant {
 			System.out.println("아빠꺼! 짬뽕 만듦!!");
 		}
 		
+	// 탕수육 만드는 기술 반드시 익혀!!
+		public abstract void makeTangsuyuk();
 }

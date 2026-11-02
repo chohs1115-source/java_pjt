@@ -18,6 +18,7 @@ public class MainClass {
 		childRestaurant.makeJajang(ChildRestaurant.CHILD_MENU);
 		childRestaurant.makeJjamppong();
 		childRestaurant.makeBokkeumbap();
+		childRestaurant.makeTangsuyuk();
 	}
 
 }
