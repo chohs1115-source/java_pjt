@@ -2,6 +2,12 @@ package com.office.calculator;
 
 public class OurCalculator {
 	
+	public void calculate(int n1, int n2, ICalculator iCalculator) {
+		int result = iCalculator.doOperator(n1, n2);
+		System.out.println("result: " + result);
+	}
+	
+	/*
 	//덧셈 연산
 	public void calAdd(int n1, int n2) {
 //		int result = n1 + n2;
@@ -38,6 +44,6 @@ public class OurCalculator {
 //		float result = calDiv.calDiv(10, 20);
 		System.out.println("result: " + result);
 	}
-	
+	*/
 	
 }

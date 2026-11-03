@@ -8,11 +8,17 @@ public class MainClass {
 		
 		// 20  10
 		
+		/*
 		ourCalculator.calAdd(20, 10);
 		ourCalculator.calSub(20, 10);
 		ourCalculator.calMul(20, 10);
 		ourCalculator.calDiv(20, 10);
+		*/
 		
+		ourCalculator.calculate(20, 10, new CalAdd());
+		ourCalculator.calculate(20, 10, new CalSub());
+		ourCalculator.calculate(20, 10, new CalMul());
+		ourCalculator.calculate(20, 10, new CalDiv());
 
 	}
 
