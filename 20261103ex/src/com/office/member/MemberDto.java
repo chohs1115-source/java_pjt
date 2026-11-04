@@ -17,6 +17,12 @@ public class MemberDto {
 		this.memMail = memMail;
 		this.memPhone = memPhone;
 	}
+	
+	public MemberDto(String memId, String memPw, String memMail) {
+		this.memId = memId;
+		this.memPw = memPw;
+		this.memMail = memMail;
+	}
 
 	public String getMemId() {
 		return memId;
@@ -50,5 +56,4 @@ public class MemberDto {
 		this.memPhone = memPhone;
 	}
 	
-
 }
