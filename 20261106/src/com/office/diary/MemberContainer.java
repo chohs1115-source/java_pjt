@@ -4,7 +4,6 @@ public class MemberContainer {
 	
 	final private MemberDao memberDao = new MemberDao();
 	final private MemberService memberService = new MemberService(memberDao);
-	final private DiaryService diaryService = new DiaryService(memberDao);
 	final private MainController memberController = new MainController(memberService);
 	
 	private static MemberContainer memberContainer;

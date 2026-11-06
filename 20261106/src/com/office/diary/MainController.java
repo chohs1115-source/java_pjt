@@ -76,7 +76,6 @@ public class MainController implements Config {
 				case WRITE:
 				
 					System.out.println("Input new content");
-					memDiary = scanner.nextLine();
 					
 					break;
 					
