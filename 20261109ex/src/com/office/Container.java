@@ -76,12 +76,6 @@ public class Container {
 		return diaryDao;
 		
 	}
-
-	public MemberController getDiaryController() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 	
 	
 
