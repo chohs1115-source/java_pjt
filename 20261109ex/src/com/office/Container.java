@@ -1,6 +1,8 @@
 package com.office;
 
 import com.office.db.DiaryDb;
+import com.office.diary.DiaryController;
+import com.office.diary.DiaryDao;
 import com.office.diary.DiaryService;
 import com.office.home.HomeController;
 import com.office.member.MemberController;
@@ -26,7 +28,7 @@ public class Container {
 		this.homeController = new HomeController();
 		
 		this.memberDao = new MemberDao(DiaryDb.getInstance());
-		this.memberService = new MemberService(this.memberDao);	//Defendency Injection
+		this.memberService = new MemberService(this.memberDao);	   //Defendency Injection
 		this.memberController = new MemberController(this.memberService);
 		
 		this.diaryDao = new DiaryDao(DiaryDb.getInstance());
@@ -72,6 +74,12 @@ public class Container {
 
 	public DiaryDao getDiaryDao() {
 		return diaryDao;
+		
+	}
+
+	public MemberController getDiaryController() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
