@@ -91,11 +91,6 @@ public class MainController implements Config {
 				
 				
 				
-				
-				
-				
-				break;
-				
 			case MODIFY:
 				
 				System.out.println("Input member ID!!");
@@ -158,3 +153,4 @@ public class MainController implements Config {
 	}
 
 }
+
