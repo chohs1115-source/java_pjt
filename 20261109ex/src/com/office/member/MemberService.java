@@ -1,11 +1,16 @@
 package com.office.member;
 
+import com.office.config.Config;
+import com.office.session.Session;
+
 public class MemberService {
 
 	final private MemberDao memberDao;
 	
 	final public static int SIGN_UP_FAIL	= 0;
 	final public static int SIGN_UP_SUCCESS	= 1;
+	final public static int MODIFY_FAIL		= 0;
+	final public static int MODIFY_SUCCESS	= 1;
 	
 	public MemberService(MemberDao memberDao) {
 		this.memberDao = memberDao;
@@ -36,4 +41,21 @@ public class MemberService {
 		}
 		
 	}
+
+	public MemberDto getMember() {
+		
+		memberDao.selectMemberByMemId(
+				String.valueOf(Session.getInstance().getAttribute(Config.SIGNINED_MEMBER_ID))
+				);
+
+		return null;
+	}
+
+	public int modify(MemberDto memberDto) {
+		
+		return memberDao.modifyMember(memberDto);
+	}
+	
+	
+	
 }
