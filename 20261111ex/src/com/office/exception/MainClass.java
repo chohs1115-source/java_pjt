@@ -16,9 +16,21 @@ public class MainClass {
 		try {
 			System.out.println("num1 / num2 = " + (num1 / num2));	// exception
 			
-		} catch (Exception e) {
-//			System.out.println(e.getMessage());
+			System.out.println("++++++++++++++");
+			
+		} catch (NullPointerException e) {
+			System.out.println(e.getMessage());
 			e.printStackTrace();
+			
+		} catch (ArithmeticException e) {
+			System.out.println("FIRE ArithmeticException");
+			e.printStackTrace();
+			
+		} catch (Exception e) {	
+			e.printStackTrace();
+			
+		} finally {
+			System.out.println("finally");
 		}
 		
 		System.out.println("num1 - num2 = " + (num1 - num2));	// 10
