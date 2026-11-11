@@ -14,11 +14,14 @@ public class Dumy {
 		
 		for(int i = 0; i < memIds.length; i++) {
 			
-			MemberDto memberDto = new MemberDto(memIds[i],memPws[i], memMails[i], memPhones[i]);
+			MemberDto memberDto = new MemberDto(
+					memIds[i], memPws[i], memMails[i], memPhones[i]
+					);
 			
-			Container.getInstance().getMemberService().signUp(memberDto);
+			Container.getInstance().getMemberService().singUp(memberDto);
 			
 		}
+		
 	}
 	
 }

@@ -8,27 +8,31 @@ public class Session {
 	
 	final private HashMap<String, Object> attributies;
 	
-	public Session() {
+	private Session() {
 		attributies = new HashMap<String, Object>();
 	}
 	
 	public static Session getInstance() {
-		if (session == null)
+		if (session == null) 
 			session = new Session();
 		
 		return session;
+		
 	}
 
 	public Object getAttribute(String name) {
 		return attributies.get(name);
+		
 	}
 	
 	public void setAttribute(String name, Object object) {
 		attributies.put(name, object);
+		
 	}
 	
 	public void removeAttribute(String name) {
 		attributies.remove(name);
+		
 	}
-	
+
 }

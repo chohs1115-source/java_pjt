@@ -10,7 +10,7 @@ import com.office.member.MemberDao;
 import com.office.member.MemberService;
 
 public class Container {
-	
+
 	private static Container container;
 	
 	final private HomeController homeController;
@@ -25,11 +25,11 @@ public class Container {
 	
 	private Container() {
 		
-		this.homeController = new HomeController();
+		homeController = new HomeController();
 		
-		this.memberDao = new MemberDao(DiaryDb.getInstance());
-		this.memberService = new MemberService(this.memberDao);	   //Defendency Injection
-		this.memberController = new MemberController(this.memberService);
+		memberDao = new MemberDao(DiaryDb.getInstance());
+		memberService = new MemberService(this.memberDao);
+		memberController = new MemberController(this.memberService);
 		
 		this.diaryDao = new DiaryDao(DiaryDb.getInstance());
 		this.diaryService = new DiaryService(this.diaryDao);
@@ -42,12 +42,13 @@ public class Container {
 			container = new Container();
 		
 		return container;
+		
 	}
+
 	
 	/*
-	 * getter
+	 * Getters
 	 */
-
 	public HomeController getHomeController() {
 		return homeController;
 	}
@@ -74,9 +75,6 @@ public class Container {
 
 	public DiaryDao getDiaryDao() {
 		return diaryDao;
-		
 	}
 	
-	
-
 }

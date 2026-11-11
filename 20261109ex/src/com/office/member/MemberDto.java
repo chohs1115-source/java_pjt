@@ -8,7 +8,7 @@ public class MemberDto {
 	private String memPhone;
 	
 	public MemberDto() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public MemberDto(String memId, String memPw, String memMail, String memPhone) {
@@ -49,8 +49,5 @@ public class MemberDto {
 	public void setMemPhone(String memPhone) {
 		this.memPhone = memPhone;
 	}
-	
-	
-	
 	
 }

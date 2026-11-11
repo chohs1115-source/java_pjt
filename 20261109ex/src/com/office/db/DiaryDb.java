@@ -7,13 +7,13 @@ import com.office.diary.DiaryDto;
 import com.office.member.MemberDto;
 
 public class DiaryDb {
-	
+
 	private static DiaryDb diaryDb;
 	
 	final private HashMap<String, MemberDto> members;
 	final private HashMap<String, ArrayList<DiaryDto>> diaries;
 	
-	public DiaryDb() {
+	private DiaryDb() {
 		members = new HashMap<String, MemberDto>();
 		diaries = new HashMap<String, ArrayList<DiaryDto>>();
 	}
@@ -23,8 +23,12 @@ public class DiaryDb {
 			diaryDb = new DiaryDb();
 		
 		return diaryDb;
+		
 	}
-
+	
+	/*
+	 * Getters
+	 */
 	public HashMap<String, MemberDto> getMembers() {
 		return members;
 	}
@@ -33,9 +37,4 @@ public class DiaryDb {
 		return diaries;
 	}
 	
-	
-	
-	
-	
-
 }
